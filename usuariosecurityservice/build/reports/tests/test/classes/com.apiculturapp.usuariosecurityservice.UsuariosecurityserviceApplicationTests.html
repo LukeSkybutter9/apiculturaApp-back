@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.015s</div>
+<div class="counter">0.012s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 <a name="contextLoads()"></a>
 <h3 class="failures">contextLoads()</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@45fb2354 testClass = com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests, locations = [], classes = [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@710b18a6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@aafcffa, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@18b0930f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@68044f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@14dda234, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4e70a728, org.springframework.boot.test.context.SpringBootTestAnnotation@de76a4ef], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@bcfe29c testClass = com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests, locations = [], classes = [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@710b18a6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@aafcffa, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@18b0930f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@68044f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@14dda234, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4e70a728, org.springframework.boot.test.context.SpringBootTestAnnotation@de76a4ef], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -201,7 +201,7 @@ Caused by: java.lang.Throwable
 </thead>
 <tr>
 <td class="failures">contextLoads()</td>
-<td class="failures">0.015s</td>
+<td class="failures">0.012s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -209,8 +209,8 @@ Caused by: java.lang.Throwable
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:14:38.652 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests]: UsuariosecurityserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:14:38.835 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication for test class com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests
+<pre>12:10:57.401 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests]: UsuariosecurityserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:10:57.749 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication for test class com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -221,20 +221,20 @@ Caused by: java.lang.Throwable
 
  :: Spring Boot ::                (v3.3.5)
 
-2024-11-06T23:14:39.478-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] u.UsuariosecurityserviceApplicationTests : Starting UsuariosecurityserviceApplicationTests using Java 17.0.12 with PID 16648 (started by Luke Skyhack in C:\Users\Luke Skyhack\Documents\Apiculturapp\usuariosecurityservice)
-2024-11-06T23:14:39.480-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] u.UsuariosecurityserviceApplicationTests : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-11-06T23:14:40.569-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-06T23:14:40.686-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
-2024-11-06T23:14:41.534-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-06T23:14:41.762-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-06T23:14:41.910-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-06T23:14:42.539-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-06T23:14:42.589-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-06T23:14:45.981-05:00  WARN 16648 --- [usuariosecurityservice] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
-2024-11-06T23:14:45.981-05:00 ERROR 16648 --- [usuariosecurityservice] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+2024-11-08T12:10:59.643-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] u.UsuariosecurityserviceApplicationTests : Starting UsuariosecurityserviceApplicationTests using Java 17.0.12 with PID 17404 (started by Luke Skyhack in C:\Users\Luke Skyhack\Documents\apiculturaApp-back\usuariosecurityservice)
+2024-11-08T12:10:59.645-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] u.UsuariosecurityserviceApplicationTests : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-11-08T12:11:02.324-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T12:11:02.421-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2024-11-08T12:11:03.706-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T12:11:03.848-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T12:11:03.926-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T12:11:04.675-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T12:11:04.758-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T12:11:08.226-05:00  WARN 17404 --- [usuariosecurityservice] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2024-11-08T12:11:08.226-05:00 ERROR 17404 --- [usuariosecurityservice] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2024-11-06T23:14:45.983-05:00  WARN 16648 --- [usuariosecurityservice] [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2024-11-08T12:11:08.227-05:00  WARN 17404 --- [usuariosecurityservice] [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
 
@@ -420,12 +420,12 @@ Caused by: java.net.UnknownHostException: No such host is known (mysql_db3)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
 	... 143 common frames omitted
 
-2024-11-06T23:14:46.004-05:00 ERROR 16648 --- [usuariosecurityservice] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQLDi] as strategy [org.hibernate.dialect.Dialect]
-2024-11-06T23:14:46.005-05:00  WARN 16648 --- [usuariosecurityservice] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQLDi] as strategy [org.hibernate.dialect.Dialect]
-2024-11-06T23:14:46.046-05:00  INFO 16648 --- [usuariosecurityservice] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-11-08T12:11:08.296-05:00 ERROR 17404 --- [usuariosecurityservice] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQLDi] as strategy [org.hibernate.dialect.Dialect]
+2024-11-08T12:11:08.298-05:00  WARN 17404 --- [usuariosecurityservice] [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQLDi] as strategy [org.hibernate.dialect.Dialect]
+2024-11-08T12:11:08.347-05:00  INFO 17404 --- [usuariosecurityservice] [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-11-06T23:14:46.075-05:00 ERROR 16648 --- [usuariosecurityservice] [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2024-11-08T12:11:08.419-05:00 ERROR 17404 --- [usuariosecurityservice] [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQLDi] as strategy [org.hibernate.dialect.Dialect]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
@@ -601,9 +601,9 @@ Caused by: java.lang.Throwable: null
 		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:206) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
 		... 138 common frames omitted
 
-2024-11-06T23:14:46.091-05:00  WARN 16648 --- [usuariosecurityservice] [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests@3c7d8a4]
+2024-11-08T12:11:08.433-05:00  WARN 17404 --- [usuariosecurityservice] [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests@37f71c05]
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@45fb2354 testClass = com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests, locations = [], classes = [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@710b18a6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@aafcffa, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@18b0930f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@68044f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@14dda234, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4e70a728, org.springframework.boot.test.context.SpringBootTestAnnotation@de76a4ef], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@bcfe29c testClass = com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplicationTests, locations = [], classes = [com.apiculturapp.usuariosecurityservice.UsuariosecurityserviceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@710b18a6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@aafcffa, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@18b0930f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@68044f4, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@14dda234, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4e70a728, org.springframework.boot.test.context.SpringBootTestAnnotation@de76a4ef], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.14.jar:6.1.14]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.14.jar:6.1.14]
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.14.jar:6.1.14]
@@ -1905,7 +1905,7 @@ Unconditional classes:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10.2</a> at Nov 6, 2024, 11:14:46 PM</p>
+<a href="http://www.gradle.org">Gradle 8.10.2</a> at Nov 8, 2024, 12:11:08 PM</p>
 </div>
 </div>
 </body>
