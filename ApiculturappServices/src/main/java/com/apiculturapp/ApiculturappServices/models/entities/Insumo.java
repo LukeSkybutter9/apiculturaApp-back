@@ -5,10 +5,14 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Data
 @Table(name = "Insumos")
+@Getter
+@Setter
 public class Insumo {
 
     @Id

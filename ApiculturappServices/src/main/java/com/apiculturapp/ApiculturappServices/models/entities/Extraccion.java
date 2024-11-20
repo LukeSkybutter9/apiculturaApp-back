@@ -1,25 +1,34 @@
 package com.apiculturapp.ApiculturappServices.models.entities;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-import org.hibernate.annotations.ColumnDefault;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Data
+
 @Entity
 @Table(name = "Extracciones")
+@Getter
+@Setter
 public class Extraccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_Extraccion", nullable = false)
+    @Column(name = "id_extraccion", nullable = false)
     private Integer idExtraccion;
 
+    @NotNull
+    @Column(name = "fecha", nullable = false)
+    private LocalDate fecha;
+
+    @NotNull
+    @Column(name = "hora", nullable = false)
+    private LocalTime hora;
+
+    @Getter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_alza")
     private Alza alza;
@@ -28,14 +37,6 @@ public class Extraccion {
     @JoinColumn(name = "id_panel")
     private Panel panel;
 
-    @NotNull
-    @Column(name = "fecha", nullable = false)
-    private LocalDateTime fecha;
-
-    @NotNull
-    @Column(name = "hora", nullable = false)
-    private LocalTime hora;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_loteenvasado")
     private Lote loteenvasado;
@@ -43,4 +44,5 @@ public class Extraccion {
     @NotNull
     @Column(name = "cantidad_cera", nullable = false)
     private Integer cantCera;
+
 }

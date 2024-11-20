@@ -13,9 +13,17 @@ public class EquipoServiceImpl implements IEquipoService {
 
     private IEquipoRepository equipoRepository;
 
+    public EquipoServiceImpl(IEquipoRepository equipoRepository) {
+        this.equipoRepository = equipoRepository;
+    }
+
     @Override
     public Equipo crearEquipo(Equipo equipo) {
-        return equipoRepository.save(equipo);
+        if(equipo.getCantDisponible()>equipo.getCantTotal()){
+            throw new RuntimeException("La cantidad disponible no puede ser mayor que la cantidad total");
+        }else{
+            return equipoRepository.save(equipo);
+        }
     }
 
     @Override

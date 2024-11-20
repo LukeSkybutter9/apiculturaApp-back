@@ -13,9 +13,17 @@ public class InsumoServiceImpl implements IInsumoService {
 
     private IInsumoRepository insumoRepository;
 
+    public InsumoServiceImpl(IInsumoRepository insumoRepository) {
+        this.insumoRepository = insumoRepository;
+    }
+
     @Override
     public Insumo crearInsumo(Insumo insumo) {
-        return insumoRepository.save(insumo);
+        if(insumo.getCantDisponible()>insumo.getCantTotal()){
+            throw new RuntimeException("La cantidad disponible no puede ser mayor que la cantidad total");
+        }else{
+            return insumoRepository.save(insumo);
+        }
     }
 
     @Override

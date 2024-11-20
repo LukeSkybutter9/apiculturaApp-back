@@ -5,7 +5,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.LinkedHashSet;
@@ -14,6 +17,8 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "Lotes")
+@Getter
+@Setter
 public class Lote {
 
 
@@ -28,7 +33,7 @@ public class Lote {
 
     @NotNull
     @Column(name = "fecha", nullable = false)
-    private LocalDateTime fecha;
+    private LocalDate fecha;
 
     @NotNull
     @Column(name = "hora", nullable = false)
@@ -44,6 +49,6 @@ public class Lote {
     @Column(name = "ubicacion", nullable = false, length = 100)
     private String ubicacion;
 
-    @OneToMany(mappedBy = "Lotes", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "loteenvasado", fetch = FetchType.LAZY)
     private Set<Extraccion> extraccion = new LinkedHashSet<>();
 }

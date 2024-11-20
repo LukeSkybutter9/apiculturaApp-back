@@ -14,6 +14,10 @@ public class ExtraccionServiceImpl implements IExtraccionService {
 
     private IExtraccionRepository extraccionRepository;
 
+    public ExtraccionServiceImpl(IExtraccionRepository extraccionRepository) {
+        this.extraccionRepository = extraccionRepository;
+    }
+
     @Override
     public Extraccion crearExtraccion(Extraccion extraccion) {
         return extraccionRepository.save(extraccion);

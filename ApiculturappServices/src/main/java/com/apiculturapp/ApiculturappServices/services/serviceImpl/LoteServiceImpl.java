@@ -13,6 +13,10 @@ public class LoteServiceImpl implements ILoteService {
 
     private ILoteRepository loteRepository;
 
+    public LoteServiceImpl(ILoteRepository loteRepository) {
+        this.loteRepository = loteRepository;
+    }
+
     @Override
     public Lote crearLote(Lote lote) {
         return loteRepository.save(lote);
