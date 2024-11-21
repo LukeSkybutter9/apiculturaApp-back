@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  mysql_db3:
+  mysql_usuariosapiculturapp:
     image: mysql:latest
-    container_name: mysql_db3
+    container_name: mysql-security-apiculturappcontainer
     environment:
       MYSQL_ROOT_PASSWORD: admin12345
       MYSQL_DATABASE: usuarios_db
@@ -18,15 +18,15 @@ services:
       timeout: 5s
       retries: 5
 
-  usuariosecurityservice:
+  usuariosecurityservice-apiculturapp:
     build:
       context: ./usuariosecurityservice
       dockerfile: Dockerfile
-    container_name: usuariosecurityservice
+    container_name: usuariosecurityservice-apiculturappcontainer
     ports:
       - "8087:8087"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db3:3306/usuarios_db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_usuariosapiculturapp:3306/usuarios_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: admin12345
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
@@ -39,14 +39,14 @@ services:
       ddl-auto: update
       show-sql: true
     depends_on:
-      mysql_db3:
+      mysql_usuariosapiculturapp:
         condition: service_healthy
     networks:
       - ali-network
 
-  mysql_db1:
+  mysql_apiculturapp:
     image: mysql:latest
-    container_name: mysql_db1
+    container_name: mysql-apiculturapp-container
     environment:
       MYSQL_ROOT_PASSWORD: admin12345
       MYSQL_DATABASE: apiculturapp_db
@@ -66,24 +66,24 @@ services:
     build:
       context: ./ApiculturappServices
       dockerfile: Dockerfile
-    container_name: apiculturappservices
+    container_name: apiculturappservices-container
     ports:
-      - "8090:8090"
+      - "8083:8083"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db3:3307/apiculturapp_db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_apiculturapp:3307/apiculturapp_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: admin12345
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: true
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
       SPRING_SERVER_ADDRESS: 0.0.0.0
-      SPRING_SERVER_PORT: 8090
+      SPRING_SERVER_PORT: 8083
       jpa:
       hibernate:
       ddl-auto: update
       show-sql: true
     depends_on:
-      mysql_db1:
+      mysql_apiculturapp:
         condition: service_healthy
     networks:
       - ali-network
