@@ -24,7 +24,7 @@ public class PublicController {
     public ResponseEntity<String> login(@RequestBody User usuario) {
         User user = userService.login(usuario.getEmail(), usuario.getPassword());
         if (user != null) {
-            String token = jwtUtil.generateToken(user.getUsername());
+            String token = jwtUtil.generateToken(user.getUsername(), user.getRole(),user.getId());
             return ResponseEntity.ok(token);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales incorrectas");

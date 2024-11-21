@@ -18,8 +18,10 @@ public class JwtUtil {
     private String SECRET_KEY;
     private final long EXPIRATION_TIME = 1000 * 60 * 60; // 1 hora
 
-    public String generateToken(String username) {
+    public String generateToken(String username, String role, Long userId) {
         Map<String, Object> claims = new HashMap<>();
+        claims.put("role", role);
+        claims.put("userId", userId);
         return createToken(claims, username);
     }
 

@@ -33,6 +33,10 @@ public class SecurityConfig {
                         .requestMatchers("/v1/admin").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
+                .formLogin(form -> form
+                        .loginPage("/page/login")
+                        .permitAll()
+                )
                 .cors(customizer -> customizer.configurationSource(corsConfigurationSource()))
                 .build();
     }
