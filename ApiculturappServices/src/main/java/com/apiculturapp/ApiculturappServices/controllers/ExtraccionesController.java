@@ -28,7 +28,6 @@ public class ExtraccionesController {
         return ResponseEntity.ok(extraccionDtos);
     }
 
-
     @GetMapping("/obtener/{id}")
     public ResponseEntity<ExtraccionDto> obtenerExtraccionPorId(@PathVariable Integer id) {
         Extraccion extraccion = extraccionService.obtenerExtraccionPorId(id)

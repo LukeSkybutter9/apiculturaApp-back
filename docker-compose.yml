@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  mysql_usuariosapiculturapp:
+  mysql_usuarios:
     image: mysql:latest
-    container_name: mysql-security-apiculturappcontainer
+    container_name: mysql-usuarios-container
     environment:
       MYSQL_ROOT_PASSWORD: admin12345
       MYSQL_DATABASE: usuarios_db
@@ -18,15 +18,15 @@ services:
       timeout: 5s
       retries: 5
 
-  usuariosecurityservice-apiculturapp:
+  securityservice:
     build:
       context: ./usuariosecurityservice
       dockerfile: Dockerfile
-    container_name: usuariosecurityservice-apiculturappcontainer
+    container_name: security-container
     ports:
       - "8087:8087"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_usuariosapiculturapp:3306/usuarios_db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_usuarios:3306/usuarios_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: admin12345
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
@@ -39,7 +39,7 @@ services:
       ddl-auto: update
       show-sql: true
     depends_on:
-      mysql_usuariosapiculturapp:
+      mysql_usuarios:
         condition: service_healthy
     networks:
       - ali-network
@@ -70,7 +70,7 @@ services:
     ports:
       - "8083:8083"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_apiculturapp:3307/apiculturapp_db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_apiculturapp:3306/apiculturapp_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: admin12345
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
