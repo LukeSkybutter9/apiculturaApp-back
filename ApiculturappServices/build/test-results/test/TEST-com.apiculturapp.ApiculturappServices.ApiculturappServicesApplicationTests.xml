@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.apiculturapp.ApiculturappServices.ApiculturappServicesApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-21T23:17:35" hostname="DESKTOP-LL69M0P" time="20.971">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.apiculturapp.ApiculturappServices.ApiculturappServicesApplicationTests" time="20.971"/>
+  <system-out><![CDATA[18:17:21.775 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.apiculturapp.ApiculturappServices.ApiculturappServicesApplicationTests]: ApiculturappServicesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:17:21.939 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.apiculturapp.ApiculturappServices.ApiculturappServicesApplication for test class com.apiculturapp.ApiculturappServices.ApiculturappServicesApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2024-11-21T18:17:22.651-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] a.A.ApiculturappServicesApplicationTests : Starting ApiculturappServicesApplicationTests using Java 17.0.12 with PID 1896 (started by Luke Skyhack in C:\Users\Luke Skyhack\Documents\apiculturaApp-back\ApiculturappServices)
+2024-11-21T18:17:22.653-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] a.A.ApiculturappServicesApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-11-21T18:17:23.885-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-21T18:17:24.020-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
+2024-11-21T18:17:24.922-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-21T18:17:25.053-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-21T18:17:25.110-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-21T18:17:27.822-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-21T18:17:27.871-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-21T18:17:31.392-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@738a39cc
+2024-11-21T18:17:31.395-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-21T18:17:31.459-05:00  WARN 1896 --- [ApiculturappServices] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-21T18:17:31.460-05:00  WARN 1896 --- [ApiculturappServices] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-11-21T18:17:33.061-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-21T18:17:33.207-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-21T18:17:34.101-05:00  WARN 1896 --- [ApiculturappServices] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-21T18:17:34.953-05:00  INFO 1896 --- [ApiculturappServices] [    Test worker] a.A.ApiculturappServicesApplicationTests : Started ApiculturappServicesApplicationTests in 12.74 seconds (process running for 15.336)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
