@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/insumos")
+@CrossOrigin(origins = "http://localhost:8080")
 public class InsumosController {
 
     private final IInsumoService insumoService;

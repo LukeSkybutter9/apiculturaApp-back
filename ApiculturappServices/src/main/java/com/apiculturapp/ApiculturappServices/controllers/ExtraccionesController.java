@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/extracciones")
+@CrossOrigin(origins = "http://localhost:8080")
 public class ExtraccionesController {
 
     private final IExtraccionService extraccionService;

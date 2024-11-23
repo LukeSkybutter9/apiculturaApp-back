@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/lotes")
+@CrossOrigin(origins = "http://localhost:8080")
 public class LotesController {
 
     private final ILoteService loteService;

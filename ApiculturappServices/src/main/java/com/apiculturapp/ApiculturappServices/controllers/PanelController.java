@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/panel")
+@CrossOrigin(origins = "http://localhost:8080")
 public class PanelController {
 
     private final IPanelService panelService;
